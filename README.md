@@ -1,12 +1,9 @@
-# Meet Frogpon [ W I P ] 
-*Project Owned by [ NAME ].*
+# Meet Frogpon
+*Project Owned by Antoinette Vincent.*
 
 ![Frog Machine](frogs/images/machine.png?raw=true "Title")
 
 A frog gacha game, in which you collect frog cards. You can acquire three types of cards: common ones, rare ones, and ultra rare ones. This project is coded solely through the frontend, using HTML/CSS and Vanilla JS. Thus, it does not have a database.
-
-![Common Frog](frogs/images/cards/common-frogband.png?raw=true "Title") ![Rare Frog](frogs/images/cards/rare-capyfamily.png?raw=true "Title")  ![Ultra Rare Frog](frogs/images/cards/ultrarare-rainday.png?raw=true "Title")
-
 
 ### For Developers:
 - To add a new frog card: 
