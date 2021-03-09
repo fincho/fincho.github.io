@@ -598,26 +598,26 @@ var FROG_CARDS = {
       'artist': artists.slide,
     },
     'froxodiala': {
-      'name': 'Left Arm of Froxodia',
-      'image': 'images/cards/froxodia_la.png',
+      'name': 'Left Arm of Frogxodia',
+      'image': 'images/cards/frogxodia_la.png',
       'description': 'a frogbidden left arm sealed by magic. +1 arm',
       'artist': artists.frogapples,
     },
     'froxodiall': {
-      'name': 'Left Leg of Froxodia',
-      'image': 'images/cards/froxodia_ll.png',
+      'name': 'Left Leg of Frogxodia',
+      'image': 'images/cards/frogxodia_ll.png',
       'description': 'a frogbidden left leg sealed by magic. +1 leg',
       'artist': artists.frogapples,
 	},
     'froxodiara': {
-      'name': 'Right Arm of Froxodia',
-      'image': 'images/cards/froxodia_ra.png',
+      'name': 'Right Arm of Frogxodia',
+      'image': 'images/cards/frogxodia_ra.png',
       'description': 'a frogbidden right arm sealed by magic. +1 arm',
       'artist': artists.frogapples,
     },
     'froxodiarl': {
-      'name': 'Right Leg of Froxodia',
-      'image': 'images/cards/froxodia_rl.png',
+      'name': 'Right Leg of Frogxodia',
+      'image': 'images/cards/frogxodia_rl.png',
       'description': 'a frogbidden right leg sealed by magic. +1 leg',
       'artist': artists.frogapples,
     },
@@ -867,7 +867,7 @@ var FROG_CARDS = {
     },
     'froxodia': {
       'name': 'Froxodia The Frogbidden',
-      'image': 'images/cards/froxodia_h.png',
+      'image': 'images/cards/frogxodia_h.png',
       'description': 'if you draw all five parts in a row, you win the game. -1 seal +1 HE',
       'artist': artists.frogapples
     }
