@@ -835,12 +835,12 @@ var FROG_CARDS = {
       'description': 'beam me up, froggie! +11 planets +6 space',
       'artist': artists.saltbunny,
     },
-    'tadpoirot': {
-      'name': 'Detective Tadpole Poirot',
-      'image': 'images/cards/tadpoirot.png',
-      'description': 'read about his latest case in who croaked? +6 suspects',
-      'artist': artists.saltbunny,
-    },
+//    'tadpoirot': {
+//      'name': 'Detective Tadpole Poirot',
+//      'image': 'images/cards/tadpoirot.png',
+//      'description': 'read about his latest case in who croaked? +6 suspects',
+//      'artist': artists.saltbunny,
+//    },
     'frogmagejourney': {
       'name': 'Frog Mage\'s Journey',
       'image': 'images/cards/frogmagejourney.png',
