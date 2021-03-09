@@ -32,8 +32,8 @@ Note if 'NameOfFrog' has a duplicate, it will go to the last duplicate
    'splishyplash': 'SplishyPlash',
    'windowkitties': 'window_kitties',
    'iyfrr': 'iyfias',
-   'saltbunny': 'saltiestbunny'
-   'kingworrell': 'king_worrell'
+   'saltbunny': 'saltiestbunny',
+   'kingworrell': 'king_worrell',
    'skullpixl': 'skullpixl'
  };
 
