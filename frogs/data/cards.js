@@ -851,7 +851,7 @@ var FROG_CARDS = {
       'name': 'Hiding Place',
       'image': 'images/cards/hidingplace.png',
       'description': 'it\'s like an easter egg! +1 cozy',
-      'artist': artists.finch,
+      'artist': artists.kiana,
     },
     'pondering': {
       'name': 'Ponder-ing',
