@@ -97,7 +97,7 @@ var FROG_CARDS = {
     'wavefrog': {
       'name': 'Wave Frog',
       'image': 'images/cards/wavefrog.png',
-      'description': 'he's wavin... but at what cost? +20 good guy +5 nice',
+      'description': 'he\'s wavin... but at what cost? +20 good guy +5 nice',
       'artist': artists.slide
     },
     'longfrog': {
