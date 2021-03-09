@@ -835,6 +835,18 @@ var FROG_CARDS = {
       'description': 'beam me up, froggie! +11 planets +6 space',
       'artist': artists.saltbunny,
     },
+    'froglove': {
+      'name': 'Frogs In Love',
+      'image': 'images/cards/froglove.png',
+      'description': 'frog wedding!! +1 wife (frog)',
+      'artist': artists.saltbunny,
+    },
+    'hoppily': {
+      'name': 'Hoppily Ever After',
+      'image': 'images/cards/hoppily.png',
+      'description': 'u may now kiss thee frog. +1 slice of cake +100 smiles a day',
+      'artist': artists.saltbunny,
+    },
 //    'tadpoirot': {
 //      'name': 'Detective Tadpole Poirot',
 //      'image': 'images/cards/tadpoirot.png',
