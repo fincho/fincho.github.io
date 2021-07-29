@@ -32,7 +32,6 @@ Note if 'NameOfFrog' has a duplicate, it will go to the last duplicate
    'splishyplash': 'SplishyPlash',
    'windowkitties': 'window_kitties',
    'iyfrr': 'iyfias',
-   'saltbunny': 'saltiestbunny',
    'kingworrell': 'king_worrell',
    'skullpixl': 'skullpixl'
  };
@@ -256,36 +255,6 @@ var FROG_CARDS = {
       'description': 'classic, timeless. +1 walk walk fashion baby',
       'artist': artists.silk,
     },
-    'thehopper': {
-      'name': 'The Hopper',
-      'image': 'images/cards/thehopper.png',
-      'description': 'veggie burger. $5. +1 spinach +1 cheese +$4 (with coupon)',
-      'artist': artists.saltbunny,
-    },
-    'bigyawn': {
-      'name': 'Big Yawn',
-      'image': 'images/cards/bigyawn.png',
-      'description': 'aww, are you a tired little guy? +4 sleepy',
-      'artist': artists.saltbunny,
-    },
-    'realcat': {
-      'name': 'A Real Cat',
-      'image': 'images/cards/realcat.png',
-      'description': 'nothin\' but a genuine cat here,',
-      'artist': artists.saltbunny,
-    },
-    'normalfrog': {
-      'name': 'A Normal Frog',
-      'image': 'images/cards/normalfrog.png',
-      'description': 'nothing unusual here! +1 normal -5 suspicion',
-      'artist': artists.saltbunny,
-    },
-    'excalillypad': {
-      'name': 'Excalillypad',
-      'image': 'images/cards/excalillypad.png',
-      'description': 'legeend tells of thee sword in the pond. +30 attack +1  kingship',
-      'artist': artists.saltbunny,
-    },
     'cursedtape': {
       'name': 'Cursed Frog Tape',
       'image': 'images/cards/cursedfrogtape.png',
@@ -334,41 +303,11 @@ var FROG_CARDS = {
       'description': 'stinky! +3 flies +10 smell',
       'artist': artists.skullpixl,
     },
-    'instantfrog': {
-      'name': 'Instant Frog',
-      'image': 'images/cards/instantfrog.png',
-      'description': 'just add water and then there he is! +75 sodium',
-      'artist': artists.saltbunny,
-    },
-    'lunchtime': {
-      'name': 'Lunch Time',
-      'image': 'images/cards/lunchtime.png',
-      'description': 'please do not eat the frog. +1 affordable lunch +75 sodium',
-      'artist': artists.saltbunny,
-    },
-    'nintentoad': {
-      'name': 'Ninten-Toad Switch',
-      'image': 'images/cards/nintentoad.png',
-      'description': 'it can only play frogger. +200 gamer points',
-      'artist': artists.saltbunny,
-    },
-    'portablepond': {
-      'name': 'Portable Pond',
-      'image': 'images/cards/portablepond.png',
-      'description': 'just a little guy in a cup! +1 little guy +1 cup',
-      'artist': artists.saltbunny,
-    },
     'willofrog': {
       'name': 'Will O\' The Frog',
       'image': 'images/cards/willofrog.png',
       'description': 'often seen in swamps at night. +1 wisp',
       'artist': artists.silk,
-    },
-    '3frogstrenchcoat': {
-      'name': '3 Frogs In a Trenchcoat',
-      'image': 'images/cards/3frogstrenchcoat.png',
-      'description': 'one human movie ticket please! +1 movie ticket +1 popcorn +3 sneaky',
-      'artist': artists.saltbunny,
     },
     'flarefrog': {
       'name': 'Flare Frog',
@@ -381,12 +320,6 @@ var FROG_CARDS = {
       'image': 'images/cards/frogception.png',
       'description': 'we need to go deeper +10 further +5 beyond',
       'artist': artists.kingworrell,
-    },
-    'froggynata': {
-      'name': 'Froggynata',
-      'image': 'images/cards/froggynata.png',
-      'description': 'takes three frogs to wield it. +7 range +3 more range (it is long)',
-      'artist': artists.saltbunny,
     },
     'gothgffrog': {
       'name': 'Goth GF Frog',
@@ -573,24 +506,6 @@ var FROG_CARDS = {
       'description': 'crispy, chewy, melty. #OrIsIt? +50 happiness',
       'artist': artists.iyfrr,
     },
-    'froggoneit': {
-      'name': 'Froggone It!',
-      'image': 'images/cards/froggoneit.png',
-      'description': 'hop along, lil\' froggie',
-      'artist': artists.saltbunny,
-    },
-    'drawfrog': {
-      'name': 'How to Draw Frog',
-      'image': 'images/cards/drawfrog.png',
-      'description': 'the sacred text. +5 drawing skill (for beginners)',
-      'artist': artists.saltbunny,
-    },
-    'dressupfrog': {
-      'name': 'Dress-Up Frog',
-      'image': 'images/cards/dressupfrog.png',
-      'description': 'big ol\' dress, little bitty frog. +20 fancy points',
-      'artist': artists.saltbunny,
-    },
     'betterdays': {
       'name': 'Better Days',
       'image': 'images/cards/betterdays.png',
@@ -632,18 +547,6 @@ var FROG_CARDS = {
       'image': 'images/cards/froggyfriends.png',
       'description': 'they shine in the nightsky. +10 friends',
       'artist': artists.silk,
-    },
-    'froggysleepover': {
-      'name': 'Froggy Sleepover',
-      'image': 'images/cards/froggysleepover.png',
-      'description': 'more like leap-over amirite? +4 party -10 bedtime',
-      'artist': artists.saltbunny,
-    },
-    'frogponpon': {
-      'name': 'Frogponpon',
-      'image': 'images/cards/frogponpon.png',
-      'description': 'everyday pond! +1 pon +1 pon +1 pon',
-      'artist': artists.saltbunny,
     },
     'froggymermaid': {
       'name': 'Froggy Mermaid',
@@ -829,30 +732,6 @@ var FROG_CARDS = {
       'description': 'they say you can hear it croak. +5 moss +1 croak',
       'artist': artists.splishyplash,
     },
-    'frogwarp': {
-      'name': 'Frog Warp',
-      'image': 'images/cards/frogwarp.png',
-      'description': 'beam me up, froggie! +11 planets +6 space',
-      'artist': artists.saltbunny,
-    },
-    'froglove': {
-      'name': 'Frogs In Love',
-      'image': 'images/cards/froglove.png',
-      'description': 'frog wedding!! +1 wife (frog)',
-      'artist': artists.saltbunny,
-    },
-    'hoppily': {
-      'name': 'Hoppily Ever After',
-      'image': 'images/cards/hoppily.png',
-      'description': 'u may now kiss thee frog. +1 slice of cake +100 smiles a day',
-      'artist': artists.saltbunny,
-    },
-//    'tadpoirot': {
-//      'name': 'Detective Tadpole Poirot',
-//      'image': 'images/cards/tadpoirot.png',
-//      'description': 'read about his latest case in who croaked? +6 suspects',
-//      'artist': artists.saltbunny,
-//    },
     'frogmagejourney': {
       'name': 'Frog Mage\'s Journey',
       'image': 'images/cards/frogmagejourney.png',
