@@ -36,7 +36,7 @@ Note if 'NameOfFrog' has a duplicate, it will go to the last duplicate
    'skullpixl': 'skullpixl',
    'cloudtrumpets': 'cloudtrumpets',
    'ilta': 'iltailtailta',
-   'lesma': 'pixe_lesma',
+   'lesma': 'pixie_lesma',
    'mima': 'pixelmima',
    'smug': 'studio_smug',
    'tofu': 'tofupixel'
@@ -572,12 +572,6 @@ var FROG_CARDS = {
       'image': 'images/cards/zombiefrog.png',
       'description': 'new frog just dropped +1 discovery',
       'artist': artists.tofu
-    },
-    'movingfrog': {
-      'name': 'Moving Frog',
-      'image': 'images/cards/movingfrog.png',
-      'description': 'he\'s moving to a new pond +10 sress -500 money',
-      'artist': artists.windowkitties
     }
 
   },
