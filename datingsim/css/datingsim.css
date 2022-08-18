@@ -12,6 +12,7 @@ padding:1em;
 
 .artwork{
 width:100%;
+min-width:300px;
 max-width:900px;
 background-size:cover;
 background-repeat:no-repeat;
