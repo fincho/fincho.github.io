@@ -13,6 +13,9 @@ padding:1em;
 .artwork{
 width:100%;
 max-width:900px;
+background-size:cover;
+background-repeat:no-repeat;
+background-position:center;
 }
 
 .credit{
