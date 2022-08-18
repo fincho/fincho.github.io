@@ -1,0 +1,20 @@
+#container{
+width:100%;
+margin:0 auto;
+padding:0;
+display:flex;
+}
+
+.showcase{
+margin:1em;
+padding:1em;
+}
+
+.artwork{
+width:100%;
+max-width:900px;
+}
+
+.credit{
+text-align:center;
+}
