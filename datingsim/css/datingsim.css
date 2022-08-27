@@ -1,3 +1,4 @@
+
 #container{
 width:100%;
 margin:0 auto;
@@ -11,12 +12,14 @@ img {
   image-rendering: pixelated;
   image-rendering: -moz-crisp-edges;
   image-rendering: crisp-edges;
+   box-shadow:2px 2px 1px rgba(0,0,0,0.2);
 }
+
 .showcase{
-margin:1em;
-padding:1em;
-width:100%;
-max-width:33%;
+   margin:1em;
+   padding-bottom:1em;
+   width:100%;
+   max-width:33%;
 }
 
 @media (max-width:800px) {
@@ -32,11 +35,23 @@ max-width:33%;
 }
 
 .artwork{
-width:100%;
-position:relative;
-z-index:-1;
+   width:100%;
+   position:relative;
+   z-index:-1;
 }
 
 .credit{
-text-align:center;
+   font-family: matchupPro, 'Open Sans', 'Helvetica Neue', sans-serif;
+   text-align:center;
+   font-size:1.1em;
+   font-weight:bolder;
+   font-color:#237992;
 }
+
+a {
+   text-decoration:none;
+}
+
+a:hover {
+	text-decoration:underline;
+}}
