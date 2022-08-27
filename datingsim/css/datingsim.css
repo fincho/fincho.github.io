@@ -3,20 +3,38 @@ width:100%;
 margin:0 auto;
 padding:0;
 display:flex;
+flex-wrap: wrap;
+justify-content:center;
 }
 
+img {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
 .showcase{
 margin:1em;
 padding:1em;
+width:100%;
+max-width:33%;
+}
+
+@media (max-width:800px) {
+	.showcase{
+		max-width:66%;
+	}
+}
+
+@media (max-width:400px) {
+	.showcase{
+		max-width:100%;
+	}
 }
 
 .artwork{
 width:100%;
-min-width:300px;
-max-width:900px;
-background-size:cover;
-background-repeat:no-repeat;
-background-position:center;
+position:relative;
+z-index:-1;
 }
 
 .credit{
