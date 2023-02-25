@@ -43,7 +43,7 @@
  cursor: pointer;
 }
 
-.frog-artist {
+.rodent-artist {
   text-align: right;
 }
 
@@ -52,7 +52,7 @@
   display: inline-block;
 }
 
-.frog-artist a, a:visited, .list-artists a, a:visited {
+.rodent-artist a, a:visited, .list-artists a, a:visited {
   font-size: 20pt;
   color: #157e91;
   text-decoration: none;
@@ -60,7 +60,7 @@
   border-bottom: 1px solid transparent;
 }
 
-.frog-artist a:hover, .list-artists a:hover {
+.rodent-artist a:hover, .list-artists a:hover {
   color: #000;
   border-color: #000;
 }

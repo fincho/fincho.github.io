@@ -9,31 +9,31 @@ const allArtists = artists;
 
 /**
  * Opens when user clicks on a card to see its information.
- * @param {integer} frogKey to find the frog with
+ * @param {integer} rodentKey to find the rodent with
  * @return {void}
 */
-function artistCreditsModal(frogKey) {
-  if (!frogKey || frogKey === undefined) return -1;
+function artistCreditsModal(rodentKey) {
+  if (!rodentKey || rodentKey === undefined) return -1;
   openModal();
-  buildCardModalBase(getFrog(frogKey));
+  buildCardModalBase(getRodent(rodentKey));
 }
 
 // /**
 //  * Opens when a new card is pulled.
-//  * @param {Object} frog
+//  * @param {Object} rodent
 //  * @return {void}
 // */
-// function newCardModal(frog) {
+// function newCardModal(rodent) {
 //   let header = document.querySelector('.new-card-header');
 //   let text = document.querySelector('.under-image-text');
 //
 //   header.style.display = "block";
 //   text.style.display = "block";
-//   header.innerHTML = "NEW FROG ALERT!";
-//   text.innerHTML = frog.name + " has been added to your collection."
+//   header.innerHTML = "NEW RODENT ALERT!";
+//   text.innerHTML = rodent.name + " has been added to your collection."
 //
 //   openModal();
-//   buildCardModalBase(frog);
+//   buildCardModalBase(rodent);
 // }
 
 /**
@@ -46,8 +46,8 @@ function openModal() {
 
   let modal = document.querySelector(".modal");
   let close = document.getElementsByClassName("close")[0];
-  let image = document.querySelector('.frog-image');
-  let artist = document.querySelector('.frog-artist');
+  let image = document.querySelector('.rodent-image');
+  let artist = document.querySelector('.rodent-artist');
 
 
   modal.style.display = "block";
@@ -83,15 +83,15 @@ function buildArtistModal() {
 /**
  * Builds the base of displaying a card, which is the same
  * for finding a new card and checking a card's information.
- * @param {Object} frog
+ * @param {Object} rodent
  * @return {void}
 */
-function buildCardModalBase(frog) {
-  let image = document.querySelector('.frog-image');
-  let artist = document.querySelector('.frog-artist');
-  if (frog !== -1) {
-    image.innerHTML = "<img src='"+ frog.image +"' alt='Card for " + frog.name + ". Description states, "+ frog.description +"' tabindex='0' / >";
-    artist.innerHTML = "<a href='https://twitter.com/"+frog.artist+"' target='_blank'>@" + frog.artist + "</a>";
+function buildCardModalBase(rodent) {
+  let image = document.querySelector('.rodent-image');
+  let artist = document.querySelector('.rodent-artist');
+  if (rodent !== -1) {
+    image.innerHTML = "<img src='"+ rodent.image +"' alt='Card for " + rodent.name + ". Description states, "+ rodent.description +"' tabindex='0' / >";
+    artist.innerHTML = "<a href='https://twitter.com/"+rodent.artist+"' target='_blank'>@" + rodent.artist + "</a>";
   } else {
     image.innerHTML = "Card does not exist, whoops!<p>Try again, ribbit.</p>";
   }
@@ -100,8 +100,8 @@ function buildCardModalBase(frog) {
 function closeModal() {
   let modal = document.querySelector(".modal");
   let close = document.getElementsByClassName("close")[0];
-  let image = document.querySelector('.frog-image');
-  let artist = document.querySelector('.frog-artist');
+  let image = document.querySelector('.rodent-image');
+  let artist = document.querySelector('.rodent-artist');
   let artistEl = document.querySelector('.list-artists');
 
   modal.style.display = "none";
