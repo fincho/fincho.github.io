@@ -182,7 +182,7 @@ function getRarity() {
  * @param {object} rodent the chosen rodent
  * @return {void}
 */
-function addrodent(rodent, rodentKey) {
+function addRodent(rodent, rodentKey) {
   let rodentCard = document.createElement("div");
   let newText = document.createElement("div");
   rodentCard.className = 'card show-artist slide-card';
