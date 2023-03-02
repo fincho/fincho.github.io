@@ -6,8 +6,8 @@
 */
 
 /**
- * Causes the frog machine to bounce when clicked.
- * @param {element} el The frog machine.
+ * Causes the rodent machine to bounce when clicked.
+ * @param {element} el The rodent machine.
  * @return {void}
 */
 function onclickBounceAnimation(el) {

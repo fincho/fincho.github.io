@@ -9,11 +9,11 @@
     background-color: #fff;
   }
 
-  #frogchine {
+  #rodentchine {
     padding: 0;
   }
 
-  #frogchine > .machine > img {
+  #rodentchine > .machine > img {
     width: 230px;
   }
 
@@ -38,7 +38,7 @@
 
   }
 
-  #total-frogs, #saved-cards {
+  #total-rodents, #saved-cards {
     padding: 0;
     width: 80%;
   }

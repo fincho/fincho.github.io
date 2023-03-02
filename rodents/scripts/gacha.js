@@ -1,31 +1,31 @@
 /**
- * Gacha.js contains all the logic for Frogpon.
+ * Gacha.js contains all the logic for Rodentpon.
  * This is the parent javascript file. Other files are
  * supplementary for organization purposes.
  * @owner tono email@email.com
  * @author Kredgons and Crobats, do not use without permission.
- * @year Built 2020
+ * @year Built 2023
  *
  * @TODO remove all console logs and unnecessary comments.
  * @TODO create a loading state and error state
 */
 
-var cards = FROG_CARDS;
+var cards = RODENT_CARDS;
 var state = {
   'clickMeClose': false,
 };
 
 var welcomeMessages = [
-  'Your frogs have been waiting for you!',
-  'Your frogs have been hopping at the thought of your return!',
-  'Your frogs have been ribbiting your name for hours!',
-  'What\'s hopping, ribbit?',
-  'Seen any tasty flies around lately, hoppity?',
-  'All frogs are valuable; rarity is human construct.',
-  'Are you for ribbiting at dusk?',
-  'We\'ve gathered some flies for brunch.',
-  'Are you ready to meet your new BFF, Best Frog Forever?',
-  'It\'s frog o clock!'
+  'Your rodents have been waiting for you!',
+  'Your rodents have been skittering at the thought of your return!',
+  'Your rodents have been squeaking your name for hours!',
+  'rodent pun',
+  'rodent pun',
+  'All rodents are valuable; rarity is human construct.',
+  'It\'s squeak-o-clock!',
+  'Is cheese healthy for rodents?',
+  'Are you ready to meet your new BFF, Best Frodent Forever?',
+  'Ratatouille looks pretty tasty.'
 ];
 
 var spacejamLyrics = "Everybody get up it's time to slam now We got a real jam goin' " +
@@ -41,7 +41,7 @@ var spacejamLyrics = "Everybody get up it's time to slam now We got a real jam g
 */
 window.onload = function() {
   let messageCenter = document.querySelector(".message-center");
-  let machine = document.querySelector("#frogpon");
+  let machine = document.querySelector("#rodentpon");
   let visited = window.localStorage.getItem("visitedBefore");
   let collectionContainer = document.querySelector('#collection-container');
   let collectionView = document.querySelector('#saved-cards');
@@ -54,7 +54,7 @@ window.onload = function() {
   state.clickMeClosed = false;
 
   if (visited) {
-    messageCenter.innerHTML = "Welcome back to Frogpon, friend!<br />" + welcomeMessages[Math.floor(Math.random() * welcomeMessages.length)];
+    messageCenter.innerHTML = "Welcome back to Rodentpon, friend!<br />" + welcomeMessages[Math.floor(Math.random() * welcomeMessages.length)];
     state.clickMeClosed = true;
   } else {
     clickMe.style.display = "block";
@@ -99,11 +99,11 @@ window.onload = function() {
   }, false)
 
   /* DELETE AFTER TESTING */
-  // document.querySelector("#clearStorage").addEventListener('click', function(e) {
-  //   localStorage.clear();
-  //   window.location.reload();
-  //   return false;
-  // });
+   document.querySelector("#clearStorage").addEventListener('click', function(e) {
+     localStorage.clear();
+     window.location.reload();
+     return false;
+   });
 
 
   document.querySelector("#switch-cards").addEventListener('click', function(e) {
@@ -123,7 +123,7 @@ window.onload = function() {
 }
 
 /**
- * Called when a user clicks #frogpon button
+ * Called when a user clicks #rodentpon button
  * This begins the gacha process. If
  * looking for a bug, start here.
  * @param {none}
@@ -132,20 +132,20 @@ window.onload = function() {
 function retrieveCard() {
   state['loading'] = true;
 
-  //First, get rarity of frog that we'll select
-  let frog = getRarity();
+  //First, get rarity of rodent that we'll select
+  let rodent = getRarity();
 
   // This works by getting a random index from cards.rarity
-  // then re-assigning frog to the random index
-  const keys = Object.keys(frog);
+  // then re-assigning rodent to the random index
+  const keys = Object.keys(rodent);
   const randomKeyName = keys[Math.floor(Math.random() * keys.length)];
-  frog = frog[randomKeyName];
+  rodent = rodent[randomKeyName];
 
-  // Add the frog to the user's screen
-  addFrog(frog, randomKeyName);
-  if (!frogExists(randomKeyName)) {
-    saveToLibrary(frog, randomKeyName);
-    // newCardModal(frog);
+  // Add the rodent to the user's screen
+  addRodent(rodent, randomKeyName);
+  if (!rodentExists(randomKeyName)) {
+    saveToLibrary(rodent, randomKeyName);
+    // newCardModal(rodent);
   }
 }
 
@@ -157,7 +157,7 @@ function retrieveCard() {
  * @return {object} containing all the cards of chosen rarity
 */
 function getRarity() {
-  let frogRarity = 0;
+  let rodentRarity = 0;
   let rarityOptions = {
     'rare': 10,
     'uncommon': 35,
@@ -167,38 +167,38 @@ function getRarity() {
   let chance = Math.floor(Math.random() * 100);
 
   if (chance < rarityOptions.rare) {
-    frogRarity = cards.rare;
+    rodentRarity = cards.rare;
   } else if (chance < rarityOptions.uncommon) {
-    frogRarity = cards.uncommon;
+    rodentRarity = cards.uncommon;
   } else {
-    frogRarity = cards.common;
+    rodentRarity = cards.common;
   }
 
-  return frogRarity;
+  return rodentRarity;
 }
 
 /**
- * Add to HTML inventory. Creates a div and adds the frog to the front.
- * @param {object} frog the chosen frog
+ * Add to HTML inventory. Creates a div and adds the rodent to the front.
+ * @param {object} rodent the chosen rodent
  * @return {void}
 */
-function addFrog(frog, frogKey) {
-  let frogCard = document.createElement("div");
+function addRodent(rodent, rodentKey) {
+  let rodentCard = document.createElement("div");
   let newText = document.createElement("div");
-  frogCard.className = 'card show-artist slide-card';
-  frogCard.innerHTML = "<img src='"+ frog.image +"' alt='Card for " + frog.name + ". Description states, "+ frog.description +"' tabindex='0' name="+frogKey+" / >";
-  document.getElementById('card-library-content').prepend(frogCard);
-  frogCard.onclick = function() {
-      artistCreditsModal(frogKey);
+  rodentCard.className = 'card show-artist slide-card';
+  rodentCard.innerHTML = "<img src='"+ rodent.image +"' alt='Card for " + rodent.name + ". Description states, "+ rodent.description +"' tabindex='0' name="+rodentKey+" / >";
+  document.getElementById('card-library-content').prepend(rodentCard);
+  rodentCard.onclick = function() {
+      artistCreditsModal(rodentKey);
   }
 
   newText.className = 'new-card-text';
   newText.innerHTML = '<br />'
 
-  cardAnimation(frogCard);
-  frogCard.prepend(newText);
+  cardAnimation(rodentCard);
+  rodentCard.prepend(newText);
 
-  if(!frogExists(frogKey)) {
+  if(!rodentExists(rodentKey)) {
     newText.innerHTML = "NEW";
   }
 }

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Frogpon</title>
+		<title>Rodentpon</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 		<meta content="utf-8" http-equiv="encoding">
 		<!--LOAD SCRIPTS-->
 		<script src="data/cards.js"></script> <!--MUST BE FIRST-->
 		<script src="scripts/gacha.js"></script>
-		<script src="scripts/frogLibrary.js"></script>
+		<script src="scripts/rodentLibrary.js"></script>
 		<script src="scripts/animation.js"></script>
 		<script src="scripts/modal.js"></script>
 
@@ -106,17 +106,15 @@ return false;
 <div class='cnt223'>
 <h1>READ BEFORE PLAYING</h1>
 <p>
-FROG ART BELONGS TO FROG ARTISTS. DO NOT STEAL, TAKE, OR USE WITHOUT PERMISSION. 
+RODENT ART BELONGS TO RODENT ARTISTS. DO NOT STEAL, TAKE, OR USE WITHOUT PERMISSION. 
 <br><br>
 Special thanks to:
 
 <br>
-<a href="https://twitter.com/illufinch">@illufinch</a> for organizing the collab 🐸
+<a href="https://twitter.com/illufinch">@illufinch</a> for organizing the collab 🐀
 <br>
-<a href="https://twitter.com/kredgons">@kredgons</a> for coding!
+<a href="https://twitter.com/kredgons">@kredgons</a> for assistance!
 <br>
-<a href="https://twitter.com/kianamosser">@kianamosser</a> for coding help 🐸
-<br/>
 <a href="https://codepen.io/pedrobenoit91/pen/aJGzYg">Pedro Benoit</a> for the popup!
 <br/>
 <a href='' class='close'>Close</a>
@@ -131,8 +129,8 @@ Special thanks to:
 		<!-- Modal content -->
 		<div class="modal-content">
 			<span class="close">&times;</span>
-			<div class="frog-image"><!--frog image appears here--></div>
-			<div class="frog-artist"><!--frog artist's name appears here--></div>
+			<div class="rodent-image"><!--rodent image appears here--></div>
+			<div class="rodent-artist"><!--rodent artist's name appears here--></div>
 			<div class="list-artists"><!--All artists appear here--></div>
 		</div>
 
@@ -156,31 +154,31 @@ Special thanks to:
 	<div class="yellow-block"></div>
 	</div>
 	<div class="message-center">
-		Welcome to Frogpon, stranger!<br />
+		Welcome to Rodentpon, stranger!<br />
 		Click the machine to get started.
 		<span class='support'></span>
 	</div>
 
 
-	<div id="frogpon-container">
-		<div id="frogchine">
+	<div id="rodentpon-container">
+		<div id="rodentchine">
 			<div class="click-me">CLICK ME</div>
 			<div class="machine">
 				<img src="images/machine.png"
-						 alt="A green machine with a frog perched on top and purple flowers off to the side. There are colorful balls inside the machine."
+						 alt="An orange machine with a hamster perched on top and warm flowers off to the side. There are colorful balls inside the machine."
 						 tabindex="0"
 						 role="button"
-						 id="frogpon"
+						 id="rodentpon"
 						 / >
 			</div>
-			<!-- <p><button id="clearStorage">RESTART GAME - FOR TESTING ONLY</button></p> -->
+			 <p><button id="clearStorage">RESTART GAME - FOR TESTING ONLY</button></p>
 			<button id="switch-cards">See your collection</button>
 		</div>
 
 		<div id="card-library-container">
 			<div id="collection-container">
-				<div id="total-frogs">0/</div>
-				<div id="saved-cards"> <!--frogs from localstorage--></div>
+				<div id="total-rodents">0/</div>
+				<div id="saved-cards"> <!--rodents from localstorage--></div>
 			</div>
 			<div id="card-library-content">
 				<!--cards will appear here wahoo-->
