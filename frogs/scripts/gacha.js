@@ -46,10 +46,21 @@ window.onload = function() {
   let collectionContainer = document.querySelector('#collection-container');
   let collectionView = document.querySelector('#saved-cards');
   let clickMe = document.querySelector(".click-me");
+  let welcomeOn = document.querySelector(".welcome-container");
 
   let currentMode = 'day';
   let changeLayoutModeRegular = document.querySelector('#regular-mode');
   let changeLayoutModeSpaceJam = document.querySelector('#spacejam-mode');
+
+
+  welcomeOn.style.display = "block";
+  
+  window.onclick = function(e) {
+   if (e.target == welcomeOn) {
+  welcomeOn.style.display = "none";
+   }
+  }
+
 
   state.clickMeClosed = false;
 
