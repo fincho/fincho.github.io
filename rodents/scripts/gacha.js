@@ -19,8 +19,7 @@ var welcomeMessages = [
   'Your rodents have been waiting for you!',
   'Your rodents have been skittering at the thought of your return!',
   'Your rodents have been squeaking your name for hours!',
-  'rodent pun',
-  'rodent pun',
+  'That\'s totally rat-ical!',
   'All rodents are valuable; rarity is human construct.',
   'It\'s squeak-o-clock!',
   'Is cheese healthy for rodents?',
@@ -46,10 +45,19 @@ window.onload = function() {
   let collectionContainer = document.querySelector('#collection-container');
   let collectionView = document.querySelector('#saved-cards');
   let clickMe = document.querySelector(".click-me");
+  let welcomeOn = document.querySelector(".welcome-container");
 
   let currentMode = 'day';
   let changeLayoutModeRegular = document.querySelector('#regular-mode');
   let changeLayoutModeSpaceJam = document.querySelector('#spacejam-mode');
+
+  welcomeOn.style.display = "block";
+  
+  window.onclick = function(e) {
+   if (e.target == welcomeOn) {
+  welcomeOn.style.display = "none";
+   }
+  }
 
   state.clickMeClosed = false;
 
@@ -98,13 +106,13 @@ window.onload = function() {
     });
   }, false)
 
-  /* DELETE AFTER TESTING */
+  /* DELETE AFTER TESTING 
    document.querySelector("#clearStorage").addEventListener('click', function(e) {
      localStorage.clear();
      window.location.reload();
      return false;
    });
-
+  */
 
   document.querySelector("#switch-cards").addEventListener('click', function(e) {
     switchView();
@@ -320,3 +328,4 @@ function setSpacejamMode () {
   document.querySelector('#regular-mode').style.background="#efd284";
   document.querySelector('#spacejam-mode').style.background="#ed6fd8";
 }
+

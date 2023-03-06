@@ -24,6 +24,8 @@ Note if 'NameOfRodent' has a duplicate, it will go to the last duplicate
    'cloudtrumpets': 'cloudtrumpets',
    'lesma': 'pixe_lesma',
    'mima': 'pixelmima',
+   'tofu': 'tofupixel',
+   'emmapixels': 'emmapixels',
    'knight': 'knightsundere',
    'sitaart': 'sitaart'
  };
@@ -203,7 +205,7 @@ var RODENT_CARDS = {
 	  'name': 'Grab',
 	  'image': 'images/cards/grab.png',
 	  'description': 'You\'re my friend now. +1 pocket rat',
-	  'artist': artists.tofupixel
+	  'artist': artists.tofu
 	}
 
 
