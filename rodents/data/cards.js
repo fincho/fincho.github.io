@@ -184,21 +184,21 @@ var RODENT_CARDS = {
 	  'name': 'Checkpoint',
 	  'image': 'images/cards/checkpoint.png',
 	  'description': 'Rest for a while. +10 heal +1 damp',
-	  'artist': artists.tofupixel
+	  'artist': artists.tofu
 	},
 		
 	'friends': {
 	  'name': 'Friends',
 	  'image': 'images/cards/friends.png',
 	  'description': 'Me and who? +5 collaboration',
-	  'artist': artists.tofupixel
+	  'artist': artists.tofu
 	},
 		
 	'molcar': {
 	  'name': 'Molcar',
 	  'image': 'images/cards/molcar.png',
 	  'description': 'Pui pui! +1 traffic violation',
-	  'artist': artists.tofupixel
+	  'artist': artists.tofu
 	},
 		
 	'grab': {

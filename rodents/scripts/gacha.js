@@ -257,7 +257,7 @@ function switchLayoutMode(layout, currentMode) {
     setDayMode();
     currentMode = 'day';
     let messageCenter = document.querySelector(".message-center");
-    messageCenter.innerHTML = "Something went wrong, ribbit.";
+    messageCenter.innerHTML = "Something went wrong, squeak.";
   }
 
   return currentMode;
@@ -310,7 +310,7 @@ function setNightMode () {
   document.querySelector('#regular-mode').style.background="";
   document.querySelector('#spacejam-mode').style.background="";
 
-  document.querySelector('.message-center').innerHTML = "Is it dark in here, or is that just me? Ribbit. <br /> " + welcomeMessages[Math.floor(Math.random() * welcomeMessages.length)];
+  document.querySelector('.message-center').innerHTML = "Is it nicer in here, or is that just me? Squeak. <br /> " + welcomeMessages[Math.floor(Math.random() * welcomeMessages.length)];
 }
 
 function setSpacejamMode () {
