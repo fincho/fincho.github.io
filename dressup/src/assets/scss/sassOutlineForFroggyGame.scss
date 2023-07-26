@@ -1,0 +1,161 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+
+#frogContainer{
+	position:fixed;
+	/* figure out where to put everything */
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	width: 1020px;
+	height: 510px;
+	border: 5px solid black; 
+	margin: 0px;
+	
+}
+
+
+
+#frog{ 
+	/* so this is where the frog should go but 
+	 *also we have to put the parts separately 
+	 */
+	 position:relative;
+	 float: left;
+	 width: 510px;
+	 height: 510px;
+	 border: 5px solid black;
+	 transform: translate(-5px, -5px);
+	 margin: 0px;
+}
+
+#optionContainer{
+	position: relative;
+	float: left;
+	width: 500px;
+	height: 500px;
+	margin: 0px;
+	transform: translate(-5px);
+	/* select the position of the grid */ 
+}
+
+#grid{
+	position: relative;
+	/*put all the images here, make it scrollable, etc*/
+}
+
+$items: ("bg": 0, "hat": 0, "body": 0, "acc": 0, "face": 0, "credits": 0);
+
+@mixin step1( $width, $color ) {
+	box-shadow:
+	$width 0 $color,
+	-$width 0 $color,
+	0 (-$width) $color,
+	0 $width $color;
+	margin: 2*$width auto;
+}
+
+button{ 
+	/*make it look nice and put it in the right spot*/
+	position: absolute;
+	right: 0px;
+	background: black;
+	color: white;
+	writing-mode: vertical-lr;
+	text-orientation: upright;
+	@include step1( 3px, black );
+	border: 0px;
+	//box-shadow: inset (-2px) (2px) 0px 0px black;
+	box-sizing: border-box;
+	font: 1.4em "Press start 2P";
+	z-index: 5;
+}
+
+#BGButton{
+	top: 0px
+}
+
+#HATButton{ 
+	top: 56px
+	/*make it look nice and put it in the right spot*/
+}
+
+#BODYButton{
+	top: 135px
+	/*make it look nice and put it in the right spot*/
+}
+
+#ACCButton{ 
+	top: 237px 
+	/*make it look nice and put it in the right spot*/
+}
+
+#FACEButton{ 
+	top: 315px
+	/*make it look nice and put it in the right spot*/
+}
+
+#CButton{ 
+	top: 417px
+	/*make it look nice and put it in the right spot*/
+}
+
+img{
+	image-rendering: pixelated;
+}
+
+.gridimg{
+	position: relative;
+	border: 2px solid black;
+	margin: 0px;
+	width: 170px;
+	height:170px;
+}
+
+#gridBody{
+	position:relative;
+	flex-direction: row;
+	display: flex;
+}
+
+.frogBg{
+	position: absolute;
+	z-index: 0;
+	width: 510px;
+	height: 510px;
+}
+
+.frogBase{
+	position: absolute;
+	z-index: 1;
+	width: 510px;
+	height: 510px;
+}
+
+.frogBody{
+	position: absolute;
+	z-index: 3;
+	width: 510px;
+	height: 510px;
+}
+
+.frogFace{
+	position: absolute;
+	z-index: 2;
+	width: 510px;
+	height: 510px;
+}
+
+.frogAcc{
+	position: absolute;
+	z-index: 4;
+	width: 510px;
+	height: 510px;
+}
+
+/* if we do this: 
+#SAVEButton{
+
+}
+*/
+
