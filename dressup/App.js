@@ -7,12 +7,13 @@ function FroggyDressUp() {
 
 	const items = {"bg": 2, "hat": 2, "body": 2, "acc": 1, "face": 2, "credits": 0};
 
-	const [bgState, setBgState] = useState("bg1.png");
+	const [bgState, setBgState] = useState("bg2.png");
 	const [hatState, setHatState] = useState("hat1.png");
 	const [bodyState, setBodyState] = useState("body1.png");
 	const [accState, setAccState] = useState("acc1.png");
 	const [faceState, setFaceState] = useState("face1.png");
 	const [creditState, setCreditState] = useState("credit0.png");
+	const [tabState, setTabState] = useState('<img class="gridimg" src={images["bg1.png"]} onClick={() => selectbg("bg1.png")}></img>');
 
 	function selectbg(name) {
 		setBgState(name);
@@ -54,16 +55,60 @@ function FroggyDressUp() {
 		 */
 		var codeBlock = '';
 		var select = 'select' + name + '(';
+		alert(select);
+		var gridBody = document.getElementById("gridBody");
 		for (var i = 0; i < items[name]; i++) {
 			var filename = name + String(i+1) + '.png';
-			var onclick = ' onClick=' + select + filename + ')';
-			var curline = '<img class="gridimg"'+ onclick + ' src=' + images[filename] + '></img>';
-			alert(curline);
-			codeBlock += curline;
-		}
+			//var onclick = ' onclick={() => ' + select + '"' + filename + '");}'; //THIS LINE IS THE ISSUE GDI)
+			//var curline = '<img id="'+ filename + '"' + onclick + ' class="gridimg"' + ' src=' + images[filename] + '></img>';
+			//alert(curline);
+			//codeBlock += curline;
 
-		document.getElementById("gridBody").innerHTML = codeBlock;
-		
+			
+			var newImage = document.createElement("img");
+			newImage.className = "gridimg";
+			newImage.setAttribute("id", filename);
+			//newImage.setAttribute("onclick", '{' + select + '"' + filename + '")}');
+			newImage.setAttribute("src", images[filename]);
+			switch (name) {
+				case "bg":
+					newImage.addEventListener("click", function() { selectbg(filename); this.forceUpdate(); alert(bgState); });
+					break;
+				default:
+					break;
+			}
+			gridBody.append(newImage);
+		}
+		//setTabState(codeBlock);
+		document.getElementById("gridBody").dangerouslySetInnerHTML = codeBlock;
+		//alert(document.getElementById("gridBody").innerHTML);
+		/*for (var i = 0; i < items[name]; i++) {
+			var filename = name + String(i+1) + '.png';
+			var element = document.getElementById(filename);
+			var selectfn = () => {};
+			switch(name) {
+				case "bg":
+					selectfn = selectbg;
+					break;
+				case "hat":
+					selectfn = selecthat;
+					break;
+				case "body":
+					selectfn = selectbody;
+					break; 
+				case "acc":
+					selectfn = selectacc; 
+					break; 
+				case "face":
+					selectfn = selectface;
+					break;
+				case "credit":
+					selectfn = selectcredit;
+					break;
+			}
+			element.setAttribute("onclick", 'select' + name + '("' + filename + '")');
+			//element.addEventListener("click", function() { selectfn(filename); });
+		}*/
 	}
 	
 	function selectTab(name) {
@@ -85,6 +130,7 @@ function FroggyDressUp() {
 	}
 	//todo, add meaningful alt text?
 	/* this has id background in the tutorial but idk if that's strictly necessary */
+	//<img class="gridimg" src={images['bg1.png']} onClick={() => selectbg("bg1.png")}></img>
 	return (
 		//here comes the html,
 		<div className="FroggyDressUp">
@@ -110,7 +156,7 @@ function FroggyDressUp() {
 				<div id="optionContainer">
 					<div id="grid">
 						<div id="gridBody">
-							<img class="gridimg" src={images['bg1.png']}></img>
+							<img class="gridimg" src={images['bg1.png']} onClick={() => selectbg("bg1.png")}></img>
 						</div>
 					</div>
 				</div> 
