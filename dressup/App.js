@@ -1,5 +1,5 @@
 // some imports idk yet what though probably the folder and react
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './assets/scss/sassOutlineForFroggyGame.scss';
 
 
@@ -7,7 +7,7 @@ function FroggyDressUp() {
 
 	const items = {"bg": 2, "hat": 2, "body": 2, "acc": 1, "face": 2, "credits": 0};
 
-	const [bgState, setBgState] = useState("bg2.png");
+	const [bgState, setBgState] = useState("bg1.png");
 	const [hatState, setHatState] = useState("hat1.png");
 	const [bodyState, setBodyState] = useState("body1.png");
 	const [accState, setAccState] = useState("acc1.png");
@@ -24,7 +24,7 @@ function FroggyDressUp() {
 	}
 
 	function selectbody(name) {
-		setHatState(name);
+		setBodyState(name);
 	}
 
 	function selectacc(name) {
@@ -38,6 +38,13 @@ function FroggyDressUp() {
 	function selectcredit(name) {
 		setCreditState(name);
 	}
+
+	useEffect(() => { setBgState(bgState); }, [bgState]);
+	useEffect(() => { setHatState(hatState); }, [hatState]);
+	useEffect(() => { setBodyState(bodyState); }, [bodyState]);
+	useEffect(() => { setAccState(accState); }, [accState]);
+	useEffect(() => { setFaceState(faceState); }, [faceState]);
+	useEffect(() => { setCreditState(creditState); }, [bgState]);
 
 	function importAll(r) {
 		let images = {};
@@ -55,33 +62,47 @@ function FroggyDressUp() {
 		 */
 		var codeBlock = '';
 		var select = 'select' + name + '(';
-		alert(select);
+		//alert(select);
 		var gridBody = document.getElementById("gridBody");
-		for (var i = 0; i < items[name]; i++) {
+		gridBody.innerHTML= '';
+		for (var i = 0; i < items[name]; i = i + 1) {
 			var filename = name + String(i+1) + '.png';
 			//var onclick = ' onclick={() => ' + select + '"' + filename + '");}'; //THIS LINE IS THE ISSUE GDI)
 			//var curline = '<img id="'+ filename + '"' + onclick + ' class="gridimg"' + ' src=' + images[filename] + '></img>';
 			//alert(curline);
 			//codeBlock += curline;
+			//alert(filename);
 
-			
 			var newImage = document.createElement("img");
 			newImage.className = "gridimg";
 			newImage.setAttribute("id", filename);
-			//newImage.setAttribute("onclick", '{' + select + '"' + filename + '")}');
+			//newImage.setAttribute("onClick", '() => ' + select + '"' + filename + '")');
 			newImage.setAttribute("src", images[filename]);
 			switch (name) {
 				case "bg":
-					newImage.addEventListener("click", function() { selectbg(filename); this.forceUpdate(); alert(bgState); });
+					(function(localFilename) { newImage.addEventListener("click", function() {  selectbg(localFilename); }); })(filename)
 					break;
-				default:
+				case 'hat':
+					(function(localFilename) { newImage.addEventListener("click", function() {  selecthat(localFilename); }); })(filename)
+					break;
+				case 'body':
+					(function(localFilename) { newImage.addEventListener("click", function() {  selectbody(localFilename); }); })(filename)
+					break;
+				case 'acc':
+					(function(localFilename) { newImage.addEventListener("click", function() {  selectacc(localFilename); }); })(filename)
+					break;
+				case 'face':
+					(function(localFilename) { newImage.addEventListener("click", function() {  selectface(localFilename); }); })(filename)
+					break;
+				case 'credit':
+					(function(localFilename) { newImage.addEventListener("click", function() {  selectcredit(localFilename); }); })(filename)
 					break;
 			}
 			gridBody.append(newImage);
 		}
 		//setTabState(codeBlock);
-		document.getElementById("gridBody").dangerouslySetInnerHTML = codeBlock;
-		//alert(document.getElementById("gridBody").innerHTML);
+		//document.getElementById("gridBody").dangerouslySetInnerHTML = codeBlock;
+		console.log(document.getElementById("gridBody").innerHTML);
 		/*for (var i = 0; i < items[name]; i++) {
 			var filename = name + String(i+1) + '.png';
 			var element = document.getElementById(filename);
@@ -139,6 +160,7 @@ function FroggyDressUp() {
 					<div id="frogbody">
 						<img class="frogBg" src={images[bgState]}/>
 						<img class="frogBase" src={images['frog_base.png']}/>
+						<img class="frogHat" src={images[hatState]}/>
 						<img class="frogBody" src={images[bodyState]}/>
 						<img class="frogFace" src={images[faceState]}/>
 						<img class="frogAcc" src={images[accState]}/>
@@ -156,7 +178,6 @@ function FroggyDressUp() {
 				<div id="optionContainer">
 					<div id="grid">
 						<div id="gridBody">
-							<img class="gridimg" src={images['bg1.png']} onClick={() => selectbg("bg1.png")}></img>
 						</div>
 					</div>
 				</div> 
