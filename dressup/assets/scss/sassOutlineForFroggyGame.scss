@@ -11,7 +11,9 @@
 	height: 510px;
 	border: 5px solid black; 
 	margin: 0px;
-	
+	flex-direction: row;
+	display:flex;
+	overflow: visible;
 }
 
 
@@ -22,21 +24,32 @@
 	 */
 	 position:relative;
 	 float: left;
+	 left: 0px;
 	 width: 510px;
 	 height: 510px;
-	 border: 5px solid black;
-	 transform: translate(-5px, -5px);
-	 margin: 0px;
+	 //border: 0px solid black;
+	 //border-right: 5px solid black;
+	 //transform: translate(-px, -5px);
+	 margin-right: 0px;
 }
 
 #optionContainer{
 	position: relative;
-	float: left;
-	width: 500px;
-	height: 500px;
+	float: right;
+	left:0px;
+	width: 510px;
+	height: 510px;
 	margin: 0px;
-	transform: translate(-5px);
+	transform: translate(0px);
+
+	overflow-y: scroll;
+	scrollbar-width: 0;
 	/* select the position of the grid */ 
+}
+
+#optionContainer::-webkit-scrollbar{
+	width: 0px;
+	//right:-6px;
 }
 
 #grid{
@@ -108,14 +121,15 @@ img{
 	position: relative;
 	border: 2px solid black;
 	margin: 0px;
-	width: 170px;
-	height:170px;
+	width: 166px;
+	height:166px;
 }
 
 #gridBody{
 	position:relative;
 	flex-direction: row;
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .frogBg{
@@ -158,6 +172,15 @@ img{
 	z-index: 5;
 	width: 510px;
 	height: 510px;
+}
+
+.border{
+	position: absolute; 
+	z-index: 10;
+	right:-3px;
+	height: 510px; 
+	width: 0;
+	border: 2.5px solid black;
 }
 
 /* if we do this: 

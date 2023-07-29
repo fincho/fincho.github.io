@@ -7,13 +7,13 @@ function FroggyDressUp() {
 
 	const items = {"bg": 2, "hat": 2, "body": 2, "acc": 1, "face": 2, "credits": 0};
 
-	const [bgState, setBgState] = useState("bg1.png");
-	const [hatState, setHatState] = useState("hat1.png");
-	const [bodyState, setBodyState] = useState("body1.png");
-	const [accState, setAccState] = useState("acc1.png");
-	const [faceState, setFaceState] = useState("face1.png");
-	const [creditState, setCreditState] = useState("credit0.png");
-	const [tabState, setTabState] = useState('<img class="gridimg" src={images["bg1.png"]} onClick={() => selectbg("bg1.png")}></img>');
+	const [bgState, setBgState] = useState("transparent.png");
+	const [hatState, setHatState] = useState("transparent.png");
+	const [bodyState, setBodyState] = useState("transparent.png");
+	const [accState, setAccState] = useState("transparent.png");
+	const [faceState, setFaceState] = useState("transparent.png");
+	const [creditState, setCreditState] = useState("transparent.png");
+	//const [tabState, setTabState] = useState('<img class="gridimg" src={images["bg1.png"]} onClick={() => selectbg("bg1.png")}></img>');
 
 	function selectbg(name) {
 		setBgState(name);
@@ -65,8 +65,8 @@ function FroggyDressUp() {
 		//alert(select);
 		var gridBody = document.getElementById("gridBody");
 		gridBody.innerHTML= '';
-		for (var i = 0; i < items[name]; i = i + 1) {
-			var filename = name + String(i+1) + '.png';
+		for (var i = 0; i <= 21/*items[name]*/; i = i + 1) {
+			var filename = name + String(i%(items[name]+1)) + '.png';
 			//var onclick = ' onclick={() => ' + select + '"' + filename + '");}'; //THIS LINE IS THE ISSUE GDI)
 			//var curline = '<img id="'+ filename + '"' + onclick + ' class="gridimg"' + ' src=' + images[filename] + '></img>';
 			//alert(curline);
@@ -78,6 +78,7 @@ function FroggyDressUp() {
 			newImage.setAttribute("id", filename);
 			//newImage.setAttribute("onClick", '() => ' + select + '"' + filename + '")');
 			newImage.setAttribute("src", images[filename]);
+			if (i % (items[name]+1) == 0) { filename = 'transparent.png'; }
 			switch (name) {
 				case "bg":
 					(function(localFilename) { newImage.addEventListener("click", function() {  selectbg(localFilename); }); })(filename)
@@ -164,6 +165,7 @@ function FroggyDressUp() {
 						<img class="frogBody" src={images[bodyState]}/>
 						<img class="frogFace" src={images[faceState]}/>
 						<img class="frogAcc" src={images[accState]}/>
+						<img class="border" src={images['transparent.png']}/>
 					</div>
 					<button id="BGButton" onClick={() => selectTab("bg")}>BG</button>
 					<button value="HAT" id="HATButton" onClick={() => selectTab("hat")}>HAT</button>
@@ -173,7 +175,8 @@ function FroggyDressUp() {
 					<button value="C" id="CButton" onClick={() => selectTab("c")}>C</button>
 
 				</div>
-			
+
+				
 			
 				<div id="optionContainer">
 					<div id="grid">
