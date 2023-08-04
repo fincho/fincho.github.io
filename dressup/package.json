@@ -2,7 +2,7 @@
   "name": "dressup",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://fincho.github.io/dressup",
+  "homepage": "https://fincho.github.io/fincho.github.io/dressup",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
