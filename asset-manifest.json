@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/fincho.github.io/dressup/static/css/main.fbcaeba2.css",
+    "main.js": "/fincho.github.io/dressup/static/js/main.43aa81f9.js",
+    "static/js/787.a9f283ac.chunk.js": "/fincho.github.io/dressup/static/js/787.a9f283ac.chunk.js",
+    "index.html": "/fincho.github.io/dressup/index.html",
+    "main.fbcaeba2.css.map": "/fincho.github.io/dressup/static/css/main.fbcaeba2.css.map",
+    "main.43aa81f9.js.map": "/fincho.github.io/dressup/static/js/main.43aa81f9.js.map",
+    "787.a9f283ac.chunk.js.map": "/fincho.github.io/dressup/static/js/787.a9f283ac.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fbcaeba2.css",
+    "static/js/main.43aa81f9.js"
+  ]
+}
