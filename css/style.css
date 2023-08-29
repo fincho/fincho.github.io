@@ -1,55 +1,129 @@
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Silkscreen:wght@700&family=VT323&display=swap');
 
 html {
-  background:#aaa;
-  font-family: 'DotGothic16', sans-serif;
-
-
+  background:#999;
+  font-family: 'VT323', monospace;
+  font-size:1.4em;
 }
 
-.container, .header {
+img {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+a:hover {
+	text-decoration:none;
+}
+
+.container {
   width:100%;
-  max-width:800px;
+  max-width:1000px;
   margin:0 auto;
   background:#fff;
-  padding:1em;
+  padding:0;
+}
+
+.container {
+  box-shadow: -5px 0 0 0 black,
+			  5px 0 0 0 black,
+			  0 -5px 0 0 black,
+			  0 5px 0 0 black;
 }
 
 .header h2{
   text-align:center;
+  font-size:2em;
   font-family: 'Silkscreen', cursive;
+  padding-top:1em;
 
+}
 
+.blurb {
+	padding:1em;
 }
 
 .projects {
   display: flex;
-  flex-direction: row;
-  background:#aaa;
-  padding:1em;
+  justify-content:center;
+  flex-direction: row-reverse;
+  background:#296590;
+  padding-top:4em;
+  padding-bottom:4em;
 }
 
 .pItem {
-  width:100%;
+  text-align:center;
+  width:98%;
+  margin:1%;
   height:200px;
   max-width:200px;
   background-image:url('https://i.gyazo.com/d02bc4d43d590d933a116c319515cc03.png');
   background-repeat:no-repeat;
-  background-size: contain; 
-  text-align:center;
-  margin-top:4em;
+  background-size: contain;
+}
+
+.pItem a{
+	color:#001b1b;
+	text-decoration:none;
+}
+
+.pTitle {
+  font-weight:bold;
+  display:block;
+  text-decoration:underline;
+}
+
+.pTitle:hover {
+  text-decoration:none;
+}
+
+.pDescription {
+  background:rgba(250,250,250,0.8);
+  border-radius:1em;
+  margin:0.1em 0.5em;
+  padding:0.5em;
+}
+
+.pDescription:hover {
+  background:rgba(250,250,250,.95);
 }
 
 .pItem img {
   width:100%;
   max-width:150px;
+  margin-top:-5.4em;
+  margin-bottom:1em;
+  transition: transform 0.1s;
+}
+
+.pItem img:hover {
+	transform: scaleX(1.1) scaleY(0.9);
+}
+
+.pItem img:active {
+	transform: scaleX(1) scaleY(0.8);
+}
+
+.footer {
+  font-size:0.8em;
+  margin:0.4em auto;
+  text-align:center;
 }
 
 @media (max-width: 800px) {
   .projects{
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .pItem {
     max-width:100%;
+	padding-bottom:10vw;
   }
+  .pItem img {
+	  margin-top:-5em;
+	  margin-bottom:0;
+  }
+  
+  .pDescription {
+	  padding:0.5em;
 }
