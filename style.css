@@ -26,7 +26,6 @@ a:hover {
 }
 
 .header, .container {
-  /*box-shadow:2px 3px 5px #587562;*/
   box-shadow:1px 2px 3px #587562;
 } 
 
@@ -45,14 +44,6 @@ a:hover {
   width:100%;
   max-width:345px;
   transition: transform 0.1s;
-  image-rendering: pixelated;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: crisp-edges;
-}
-
-.header h2{
-  font-size:2em;
-  /*font-family: 'Silkscreen', cursive;*/
 }
 
 .blurb {
@@ -72,7 +63,7 @@ a:hover {
   justify-content:center;
   flex-direction: row-reverse;
   background:#7ccb9d;
-  padding-top:4em;
+  padding-top:5em;
   padding-bottom:4em;
 }
 
@@ -82,9 +73,12 @@ a:hover {
   margin:1%;
   height:200px;
   max-width:200px;
-  background-image:url('images/lilypad2.png');
+  background-image:url('images/lilypad.png');
   background-repeat:no-repeat;
   background-size: contain;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
 }
 
 .pItem a{
@@ -140,14 +134,17 @@ a:hover {
     flex-direction: column-reverse;
   }
   .pItem {
-    max-width:100%;
-	padding-bottom:10vw;
+	margin:20vw auto;
+	max-width:100%;
+	height:20vw;
+	padding-top:20vw;
   }
+  
   .pItem img {
-	  margin-top:-4em;
-	  margin-bottom:0;
+	  max-width:50%;
+  margin-top:-45vw;
   }
   
   .pDescription {
-	  padding:0.5em;
+	  padding:0.7em;
 }
