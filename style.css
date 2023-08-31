@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Silkscreen:wght@700&family=VT323&display=swap');
 
 html {
-  background:#999;
+  background:url('images/bg.png');
   font-family: 'VT323', monospace;
   font-size:1.4em;
+  color:#303054;
 }
 
 img {
@@ -24,30 +25,53 @@ a:hover {
   padding:0;
 }
 
-.container {
-  box-shadow: -5px 0 0 0 black,
-			  5px 0 0 0 black,
-			  0 -5px 0 0 black,
-			  0 5px 0 0 black;
+.header, .container {
+  /*box-shadow:2px 3px 5px #587562;*/
+  box-shadow:1px 2px 3px #587562;
+} 
+
+.header {
+  width:90%;
+  max-width:500px;
+  margin:1em auto;
+  padding-top:1em;
+  padding-bottom:1em;
+  background:#fff;
+  border-radius:1em;
+  text-align:center;
+}
+
+.header img {
+  width:100%;
+  max-width:345px;
+  transition: transform 0.1s;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
 }
 
 .header h2{
-  text-align:center;
   font-size:2em;
-  font-family: 'Silkscreen', cursive;
-  padding-top:1em;
-
+  /*font-family: 'Silkscreen', cursive;*/
 }
 
 .blurb {
 	padding:1em;
 }
 
+.blurb a {
+	color:#157e91;
+}
+
+.blurb a:hover {
+	color:#edb270;
+}
+
 .projects {
   display: flex;
   justify-content:center;
   flex-direction: row-reverse;
-  background:#296590;
+  background:#7ccb9d;
   padding-top:4em;
   padding-bottom:4em;
 }
@@ -58,13 +82,13 @@ a:hover {
   margin:1%;
   height:200px;
   max-width:200px;
-  background-image:url('https://i.gyazo.com/d02bc4d43d590d933a116c319515cc03.png');
+  background-image:url('images/lilypad2.png');
   background-repeat:no-repeat;
   background-size: contain;
 }
 
 .pItem a{
-	color:#001b1b;
+	color:#000;
 	text-decoration:none;
 }
 
@@ -79,29 +103,29 @@ a:hover {
 }
 
 .pDescription {
-  background:rgba(250,250,250,0.8);
+  background:rgba(255,255,255,0.8);
   border-radius:1em;
   margin:0.1em 0.5em;
   padding:0.5em;
 }
 
 .pDescription:hover {
-  background:rgba(250,250,250,.95);
+  background:rgba(255,255,255,.95);
 }
 
 .pItem img {
   width:100%;
   max-width:150px;
-  margin-top:-5.4em;
+  margin-top:-4.5em;
   margin-bottom:1em;
   transition: transform 0.1s;
 }
 
-.pItem img:hover {
+.pItem img:hover, .header img:hover {
 	transform: scaleX(1.1) scaleY(0.9);
 }
 
-.pItem img:active {
+.pItem img:active, .header img:active {
 	transform: scaleX(1) scaleY(0.8);
 }
 
@@ -120,7 +144,7 @@ a:hover {
 	padding-bottom:10vw;
   }
   .pItem img {
-	  margin-top:-5em;
+	  margin-top:-4em;
 	  margin-bottom:0;
   }
   
