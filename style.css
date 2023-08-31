@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Silkscreen:wght@700&family=VT323&display=swap');
 
 html {
-  background:url('images/bg.png');
+  background:url('images/bg.png') fixed;
   font-family: 'VT323', monospace;
   font-size:1.4em;
   color:#303054;
@@ -125,8 +125,12 @@ a:hover {
 
 .footer {
   font-size:0.8em;
-  margin:0.4em auto;
+  margin:0.6em auto;
   text-align:center;
+}
+
+.footer a {
+  color:#000;
 }
 
 @media (max-width: 800px) {
