@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Silkscreen:wght@700&family=VT323&display=swap');
+
+html {
+  background:url('images/bg.png') fixed;
+  font-family: 'VT323', monospace;
+  font-size:1.4em;
+  color:#303054;
+}
+
+img {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+a:hover {
+	text-decoration:none;
+}
+
+.container {
+  width:100%;
+  max-width:1000px;
+  margin:0 auto;
+  background:#fff;
+  padding:0;
+}
+
+.header, .container {
+  box-shadow:1px 2px 3px #587562;
+} 
+
+.header {
+  width:90%;
+  max-width:500px;
+  margin:1em auto;
+  padding-top:1em;
+  padding-bottom:1em;
+  background:#fff;
+  border-radius:1em;
+  text-align:center;
+}
+
+.header img {
+  width:100%;
+  max-width:345px;
+  transition: transform 0.1s;
+}
+
+.blurb {
+	padding:1em;
+}
+
+.blurb a {
+	color:#157e91;
+}
+
+.blurb a:hover {
+	color:#edb270;
+}
+
+.projects {
+  display: flex;
+  justify-content:center;
+  flex-direction: row-reverse;
+  background:#7ccb9d;
+  padding-top:5em;
+  padding-bottom:4em;
+}
+
+.pItem {
+  text-align:center;
+  width:98%;
+  margin:1%;
+  height:200px;
+  max-width:200px;
+  background-image:url('images/lilypad.png');
+  background-repeat:no-repeat;
+  background-size: contain;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+.pItem a{
+	color:#000;
+	text-decoration:none;
+}
+
+.pTitle {
+  font-weight:bold;
+  display:block;
+  text-decoration:underline;
+}
+
+.pTitle:hover {
+  text-decoration:none;
+}
+
+.pDescription {
+  background:rgba(255,255,255,0.8);
+  border-radius:1em;
+  margin:0.1em 0.5em;
+  padding:0.5em;
+}
+
+.pDescription:hover {
+  background:rgba(255,255,255,.95);
+}
+
+.pItem img {
+  width:100%;
+  max-width:150px;
+  margin-top:-4.5em;
+  margin-bottom:1em;
+  transition: transform 0.1s;
+}
+
+.pItem img:hover, .header img:hover {
+	transform: scaleX(1.1) scaleY(0.9);
+}
+
+.pItem img:active, .header img:active {
+	transform: scaleX(1) scaleY(0.8);
+}
+
+.footer {
+  font-size:0.8em;
+  margin:0.6em auto;
+  text-align:center;
+}
+
+.footer a {
+  color:#000;
+}
+
+@media (max-width: 800px) {
+  .projects{
+    flex-direction: column-reverse;
+  }
+  .pItem {
+	margin:20vw auto;
+	max-width:100%;
+	height:20vw;
+	padding-top:20vw;
+  }
+  
+  .pItem img {
+	  max-width:50%;
+  margin-top:-45vw;
+  }
+  
+  .pDescription {
+	  padding:0.7em;
+}
