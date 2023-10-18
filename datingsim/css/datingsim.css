@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Silkscreen:wght@700&family=VT323&display=swap');
+
+html {
+  background:url('/datingsim/img/bg.png') fixed;
+  font-family: 'VT323', monospace;
+  font-size:2em;
+  color:#303054;
+}
 
 #container{
 width:100%;
@@ -41,10 +49,7 @@ img {
 }
 
 .credit{
-   font-family: matchupPro, 'Open Sans', 'Helvetica Neue', sans-serif;
    text-align:center;
-   font-size:1.1em;
-   font-weight:bolder;
 }
 
 a {
