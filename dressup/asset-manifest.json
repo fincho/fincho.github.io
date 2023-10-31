@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/dressup/static/css/main.8b5d44fa.css",
-    "main.js": "/dressup/static/js/main.18df7477.js",
+    "main.js": "/dressup/static/js/main.88691a5a.js",
     "static/js/787.1fb3dddd.chunk.js": "/dressup/static/js/787.1fb3dddd.chunk.js",
     "static/media/bg.png": "/dressup/static/media/bg.baa1c5499c0e6f5945c8.png",
     "index.html": "/dressup/index.html",
     "main.8b5d44fa.css.map": "/dressup/static/css/main.8b5d44fa.css.map",
-    "main.18df7477.js.map": "/dressup/static/js/main.18df7477.js.map",
+    "main.88691a5a.js.map": "/dressup/static/js/main.88691a5a.js.map",
     "787.1fb3dddd.chunk.js.map": "/dressup/static/js/787.1fb3dddd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8b5d44fa.css",
-    "static/js/main.18df7477.js"
+    "static/js/main.88691a5a.js"
   ]
 }
