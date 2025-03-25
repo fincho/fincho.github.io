@@ -62,6 +62,7 @@ a:hover {
   display: flex;
   justify-content:center;
   flex-direction: row-reverse;
+  flex-wrap:wrap;
   background:#7ccb9d;
   padding-top:5em;
   padding-bottom:4em;
