@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Silkscreen:wght@700&family=VT323&display=swap');
 
 html {
-  background:url('/petsim/credits/img/bg.png') fixed;
+  background:url('/tamagotchi/credits/img/bg.png') fixed;
   font-family: 'VT323', monospace;
   font-size:2em;
   color:#303054;
